@@ -1,0 +1,51 @@
+# Datasets (raw & processed excluded from Git; place locally per README.md)
+bank_marketing/data/
+covertype/data/
+**/data/raw/
+**/data/processed/
+*.data
+*.data.gz
+*.zip
+
+# Independent nested sub-repository (keep separate git history intact)
+training5DPSO/
+
+# External reference PDFs / spreadsheets (keep .bib and citation scripts only)
+references/**/*.pdf
+references/**/*.xlsx
+references/*.pdf
+references/*.xlsx
+
+# Local workspace scratch scripts, agent skills, and legacy drafts
+scratch/
+.agents/
+output/
+/main.pdf
+/main.log
+*.docx
+qpso_ideas.md
+
+# LaTeX build artifacts & backups (keep .tex source, figures, fonts, and final PDFs)
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.bak_*
+latex/main(Read Only).*
+latex/test_compile.*
+
+# Python & Jupyter cache
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+.pytest_cache/
+.venv/
+venv/
+.DS_Store
+Thumbs.db

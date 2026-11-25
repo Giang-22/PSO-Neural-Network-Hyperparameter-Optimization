@@ -1,0 +1,31 @@
+\begin{table}[htbp]
+\centering
+\fontsize{8.5pt}{11pt}\selectfont
+\caption{Independent validation and test generalization results on the Forest Covertype benchmark across 15 Particle Swarm Optimization variants. The highest validation and test accuracies are highlighted in bold. \\ (Kết quả kiểm chứng độc lập trên tập dữ liệu Forest Covertype giữa 15 biến thể PSO.)}
+\label{tab:covertype_15algos}
+\vspace{3pt}
+\begin{tabular}{llccccc}
+\hline\hline
+\textbf{Algorithm} & \textbf{Paradigm / Mechanism} & \textbf{CV Score} & \textbf{Test Acc.} & \textbf{$n_{\mathrm{neurons}}$} & \textbf{Learning Rate ($\eta$)} & \textbf{L2 Penalty ($\alpha$)} \\
+\hline
+Standard PSO & Baseline (Static $w=0.7$) & 0.8409 & 0.8507 & 229 & 0.00199 & 0.00172 \\
+LD-PSO & Classical (Linear Decay $w$) & 0.8407 & 0.8537 & 256 & 0.00180 & 0.01686 \\
+FA-PSO & Classical (Multi-Seed Avg $k=3$) & 0.8019 & 0.8497 & 217 & 0.00251 & 0.05050 \\
+CPSO & Classical (Clerc Constriction $K$) & 0.8068 & 0.8473 & 234 & 0.00265 & 0.00846 \\
+\hline
+FO-PSO & Proposed (Fractional Memory $\alpha=0.6$) & 0.8395 & 0.8535 & 212 & 0.00233 & 0.01168 \\
+A-PSO & Proposed (Directional Cosine Brake) & \textbf{0.8430} & 0.8413 & 213 & 0.00240 & 0.02056 \\
+NL-PSO & Proposed (Non-linear Saturation) & 0.8398 & 0.8505 & 256 & 0.00228 & 0.00588 \\
+MB-PSO & Proposed (Tri-Attractor Consensus) & 0.8390 & 0.8447 & 193 & 0.00420 & 0.00746 \\
+\hline
+QPSO & Quantum (Bare-bones $\beta=0.75$) & 0.8421 & 0.8467 & 256 & 0.00234 & 0.00101 \\
+Q-LDPSO & Quantum (Linear Decay $\beta$) & 0.8418 & \textbf{0.8542} & 256 & 0.00198 & 0.00275 \\
+Q-MBPSO & Quantum (Top-$K$ Mean-Best) & 0.8414 & 0.8520 & 238 & 0.00219 & 0.00095 \\
+\hline
+QPSO Nonlinear & Proposed Quantum (Cosine Decay $\beta$) & 0.8414 & 0.8492 & 255 & 0.00231 & 0.00001 \\
+QPSO Adaptive & Proposed Quantum (Fitness-Adaptive $\beta$) & 0.8409 & 0.8490 & 256 & 0.00121 & 0.01438 \\
+QPSO Per-Particle & Proposed Quantum (Distance-Adaptive $\beta$) & 0.8410 & 0.8515 & 252 & 0.00111 & 0.00334 \\
+OQ-PSO & Proposed Quantum (Opposition-Based) & 0.8399 & 0.8497 & 250 & 0.00260 & 0.00021 \\
+\hline\hline
+\end{tabular}
+\end{table}
